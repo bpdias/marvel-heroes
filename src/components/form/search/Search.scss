@@ -1,0 +1,50 @@
+@import '../../../helpers/stylesheets/Base.scss';
+
+.search {
+  flex: 0 0 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__input {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: $color-gray-light-2;
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all .2s;
+    // margin-right: -3.5rem;
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: $color-gray-dark;
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: $color-gray-dark;
+    }
+  }
+
+  &__buttom {
+    border: none;
+    background-color: $color-gray-light-2;
+
+    &:focus {
+      outline: none
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-gray-dark;
+  }
+}
