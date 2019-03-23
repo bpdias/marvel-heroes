@@ -78,3 +78,12 @@ export const character = (state = defaultCharacter, action) => {
       return state;
   }
 };
+
+// 
+//  SEARCH CHARACTERS REDUCERS
+// 
+
+const defaultSearchCharacters = {
+  characters: [],
+  error: false,
+}

@@ -2,18 +2,16 @@ import React from 'react';
 import Search from '../form/search/Search';
 import './Header.scss';
 
-const Header = () => (
+const Header = (props) => (
   <header className="header">
     <div className="header__navbar">
     <div className="header__logo">
         <p>Logo</p>
       </div>
       <div className="header__search">
-        <Search />
+        <Search onSearch={props.onSearch}/>
       </div>
-      <div className="header__links">
-        <a>link</a>
-      </div>
+      <div className="header__links"></div>
     </div>
 
     <div className='header__hero'>

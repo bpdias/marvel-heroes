@@ -30,10 +30,13 @@ const fetchAllCharatersError = error => ({
   error,
 });
 
-export const fetchAllCharacters = () => ((dispatch) => {
+export const fetchAllCharacters = (query) => ((dispatch) => {
   dispatch(fetchAllCharatersLoading(true));
-
-  return get(`${Endpoints.CHARACTERS}&${Constants.apiKey}`)
+  let search;
+  
+  query ? search = `&nameStartsWith=${query}` : search = ''
+  
+  return get(`${Endpoints.CHARACTERS}${Constants.apiKey}${search}`)
     .then((response) => {
       dispatch(fetchAllCharatersSuccess(response));
       if(response.code !== 200) {
@@ -66,7 +69,7 @@ const fetchCharaterError = error => ({
 export const fetchCharacter = id => ((dispatch) => {
   dispatch(fetchCharaterLoading(true));
 
-  return get(`${Endpoints.CHARACTERS}/1009268?${Constants.apiKey}`)
+  return get(`${Endpoints.CHARACTERS}/${id}?${Constants.apiKey}`)
     .then((response) => {
       dispatch(fetchCharaterSuccess(response));
       if(response.code !== 200) {

@@ -13,5 +13,5 @@ export default combineReducers({
   characters,
   charactersLoading,
   character,
-  characterLoading
+  characterLoading,
 });

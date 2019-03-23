@@ -1,14 +1,12 @@
 @import '../../helpers/stylesheets/Base';
 
 .heroes__card{
-  flex: 1 0 20%; /* explanation below */
+  flex: 0 0 20%; /* explanation below */
   margin: 5px;
-  height: 100px;
-  background-color: blue;
   height: 100%;
   position: relative;
   cursor: pointer;
-
+  
   &-photo {
     width: 100%;
     display: block;
