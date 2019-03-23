@@ -6,7 +6,7 @@ import Header from '../../components/header';
 class Heroes extends Component {
   componentDidMount() {
     this.props._onInitCharacters();
-    this.props._onInitCharacter();
+    // this.props._onInitCharacter();
   }
   
   render() {
@@ -14,7 +14,7 @@ class Heroes extends Component {
       <div className='heroes'>
         <Header/>
         <div className="heroes__container">
-          
+          {/* Put the grid for heroes */}
         </div>
       </div>
     )

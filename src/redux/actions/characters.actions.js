@@ -36,10 +36,10 @@ export const fetchAllCharacters = () => ((dispatch) => {
   return get(`${Endpoints.CHARACTERS}?${Constants.apiKey}`)
     .then((response) => {
       dispatch(fetchAllCharatersSuccess(response));
-      dispatch(fetchAllCharatersLoading(false));
       if(response.code !== 200) {
-        dispatch(fetchAllCharatersError(response));  
+        return dispatch(fetchAllCharatersError(response));  
       }
+      dispatch(fetchAllCharatersLoading(false));
     })
     .catch((e) => console.log(e));
 });
@@ -69,10 +69,10 @@ export const fetchCharacter = id => ((dispatch) => {
   return get(`${Endpoints.CHARACTERS}/1009268?${Constants.apiKey}`)
     .then((response) => {
       dispatch(fetchCharaterSuccess(response));
-      dispatch(fetchCharaterLoading(false));
       if(response.code !== 200) {
-        dispatch(fetchCharaterError(response));  
+        return dispatch(fetchCharaterError(response));  
       }
+      dispatch(fetchCharaterLoading(false));
     })
     .catch((e) => console.log(e));
 });
