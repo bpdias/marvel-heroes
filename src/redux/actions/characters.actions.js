@@ -33,7 +33,7 @@ const fetchAllCharatersError = error => ({
 export const fetchAllCharacters = () => ((dispatch) => {
   dispatch(fetchAllCharatersLoading(true));
 
-  return get(`${Endpoints.CHARACTERS}?${Constants.apiKey}`)
+  return get(`${Endpoints.CHARACTERS}&${Constants.apiKey}`)
     .then((response) => {
       dispatch(fetchAllCharatersSuccess(response));
       if(response.code !== 200) {
