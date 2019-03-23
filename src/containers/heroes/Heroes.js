@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { fetchAllCharacters, fetchCharacter } from '../../redux/actions/characters.actions';
 import Header from '../../components/header';
 import Card from '../../components/card'
+import Spinner from '../../components/spinner'
 import Aux from '../../hocs/Aux'
 import './Heroes.scss'
 
 class Heroes extends Component {
   componentDidMount() {
     this.props._onInitCharacters();
-    // this.props._onInitCharacter();
   }
   
   render() {
@@ -25,34 +25,14 @@ class Heroes extends Component {
           })}
         </Aux>
       )
-      
-      
-      
+    } else {
+      cards = (
+        <Aux>
+          <Spinner />
+        </Aux>
+      );
     }
-    //   cards = (
-    //     <Aux>
-    //       {this.props.shipments.map((shipment) => {
-    //         return (
-    //           <Card
-    //             shipment={shipment}
-    //             key={shipment.id}
-    //             active={shipment.id === this.state.activeCard}
-    //             setActiveCard={this.setActiveCard}
-    //           />
-    //         );
-    //       })}
-    //     </Aux>
-    //   );
-    // } 
-      
     
-    // cards = (
-      //   <Aux>
-      //     <Spinner />
-      //   </Aux>
-      // );
-    
-
     return (
       <div className='heroes'>
         <Header/>
@@ -74,7 +54,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     _onInitCharacters: () => dispatch(fetchAllCharacters()),
-    _onInitCharacter: () => dispatch(fetchCharacter()),
   };
 };
 

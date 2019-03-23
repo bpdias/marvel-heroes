@@ -1,6 +1,6 @@
 import React from 'react';
 import Aux from '../../hocs/Aux';
-import './Card';
+import './Card.scss';
 
 
 const Card = (props) => {
@@ -16,6 +16,10 @@ const Card = (props) => {
             className="heroes__card-photo"
           />
         </figure>
+        <figcaption className="heroes__card-caption">
+          <span className="heroes__card-caption--name">{character.name}</span>
+          <span className="heroes__card-caption--details">Details</span>
+        </figcaption>
       </div>  
     </Aux>
   )
