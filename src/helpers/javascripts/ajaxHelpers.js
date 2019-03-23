@@ -8,4 +8,4 @@ const processResponse = (response) => {
     return response;
 };
 
-export const get = url => fetch(`${Constants.host}/${url}`).then(processResponse);
+export const get = url => fetch(`${Constants.host}${url}`).then(processResponse);
