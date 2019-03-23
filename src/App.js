@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Aux from './hocs/Aux';
-import Heroes from './containers/heroes';
+import Routes from './setupRoutes';
 
 class App extends Component {
   render() {
     return (
       <Aux>
-        <Heroes />
+        <Routes />
       </Aux>
     );
   }

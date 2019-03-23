@@ -11,6 +11,18 @@
     align-items: center
   }
 
+  &__logo {
+    flex-grow: 1;
+  }
+
+  &__search {
+    flex-grow: 2;
+  }
+
+  &__links {
+    flex-grow: 1;
+  }
+  
   &__hero {
     height: 70vh;
     background-image: linear-gradient(
