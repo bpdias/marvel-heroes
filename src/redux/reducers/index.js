@@ -5,9 +5,13 @@ import {
 import {
   characters,
   charactersLoading,
+  character,
+  characterLoading,
 } from './characters.reducer';
 
 export default combineReducers({
   characters,
-  charactersLoading
+  charactersLoading,
+  character,
+  characterLoading
 });

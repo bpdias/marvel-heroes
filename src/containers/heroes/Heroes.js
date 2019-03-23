@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { fetchAllCharacters } from '../../redux/actions/characters.actions';
+import { fetchAllCharacters, fetchCharacter } from '../../redux/actions/characters.actions';
 import Header from '../../components/header';
 
 class Heroes extends Component {
   componentDidMount() {
     this.props._onInitCharacters();
+    this.props._onInitCharacter();
   }
   
   render() {
@@ -30,6 +31,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     _onInitCharacters: () => dispatch(fetchAllCharacters()),
+    _onInitCharacter: () => dispatch(fetchCharacter()),
   };
 };
 
