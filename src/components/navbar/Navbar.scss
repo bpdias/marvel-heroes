@@ -8,8 +8,16 @@
   justify-content: space-between;
   align-items: center;
   
+  a {
+    text-decoration: none;
+    color: $color-secondary-dark;
+    font-weight: 700;
+  }
+
   &__logo {
     flex-grow: 1;
+    font-size: 3rem;
+    padding-left: 2rem;
   }
   
   &__search {
@@ -20,4 +28,3 @@
     flex-grow: 1;
   }
 }
-

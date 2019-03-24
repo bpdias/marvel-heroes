@@ -8,13 +8,7 @@ const Navbar = (props) => {
     <div className="navbar">
       <div className="navbar__logo">
       <Link to={{ pathname: `/` }} >
-        <figure className="navbar__logo-figure">
-          <img 
-            src='../../assets/images/marvel-logo.png'
-            alt='Marvel'
-            className="navbar__logo-img"
-          />
-        </figure>
+        MARVEL
       </Link>
       </div>
       <div className="navbar__search">
