@@ -1,0 +1,41 @@
+@import '../../helpers/stylesheets/Base';
+
+.details__character {
+  width: 25rem;
+  height: 60rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .15);  
+  
+  &-img {
+    border-radius: 3px;
+  }
+
+  &-photo {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    width: 100%;
+    display: block;
+  }
+
+  &-details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-gray-light-2;
+        }
+      }
+      
+    }
+  };
+
+}

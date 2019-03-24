@@ -5,9 +5,11 @@
   margin: 5px;
   height: 100%;
   position: relative;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .3);  
   cursor: pointer;
   
   &-photo {
+    border-radius: 3px;
     width: 100%;
     display: block;
   }

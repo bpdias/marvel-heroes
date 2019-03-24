@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { fetchAllCharacters } from '../../redux/actions/characters.actions';
 import Header from '../../components/header';
+import Navbar from '../../components/navbar';
 import CardsWrapper from '../../components/cardsWrapper';
 import './Heroes.scss'
 
@@ -17,7 +18,8 @@ class Heroes extends Component {
   render() {
     return (
       <div className='heroes'>
-        <Header onSearch={this.fetchCharacter}/>
+        <Navbar onSearch={this.fetchCharacter} />
+        <Header />
         <CardsWrapper characters={this.props.characters} />         
       </div>
     )

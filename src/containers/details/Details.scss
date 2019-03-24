@@ -1,0 +1,12 @@
+@import '../../helpers/stylesheets/Base';
+
+.details {
+  &__container{
+    height: 100%;
+    background-color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 15rem;
+  }
+}

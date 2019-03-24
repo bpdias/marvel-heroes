@@ -2,27 +2,6 @@
 
 .header {
   
-  &__navbar {
-    height: 5rem;
-    background-color: $color-white;
-    border-bottom: 3px solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center
-  }
-
-  &__logo {
-    flex-grow: 1;
-  }
-
-  &__search {
-    flex-grow: 2;
-  }
-
-  &__links {
-    flex-grow: 1;
-  }
-  
   &__hero {
     height: 70vh;
     background-image: linear-gradient(

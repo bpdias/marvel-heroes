@@ -69,7 +69,7 @@ const fetchCharaterError = error => ({
 export const fetchCharacter = id => ((dispatch) => {
   dispatch(fetchCharaterLoading(true));
 
-  return get(`${Endpoints.CHARACTERS}/${id}?${Constants.apiKey}`)
+  return get(`${Endpoints.CHARACTER}${id}?${Constants.apiKey}`)
     .then((response) => {
       dispatch(fetchCharaterSuccess(response));
       if(response.code !== 200) {

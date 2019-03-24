@@ -1,0 +1,23 @@
+@import '../../helpers/stylesheets/Base.scss';
+
+.navbar {
+  height: 5rem;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-gray-light-2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  &__logo {
+    flex-grow: 1;
+  }
+  
+  &__search {
+    flex-grow: 2;
+  }
+  
+  &__links {
+    flex-grow: 1;
+  }
+}
+
