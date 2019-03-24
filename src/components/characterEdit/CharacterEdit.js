@@ -1,24 +1,50 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import './CharacterEdit.scss';
 import Input from '../form/input';
 import Textarea from '../form/textarea';
 
-const CharactersEdit = () => {
+const CharactersEdit = (props) => {
   function onChangeInput(e) {
-    const name = document.getElementById('charname')
+    const name = getField().charname
     name.textContent = e.target.value
   } 
   
   function onChangeTextarea(e) {
-    const desc = document.getElementById('chardesc')
+    const desc = getField().chardesc;
     desc.textContent = e.target.value
   }
 
   function onClick(e) {
     e.preventDefault();
-    console.log(e)
+    save();
   }
 
+  function getCharactes() {
+    const localSavedCharacters = JSON.parse(localStorage.getItem('editedCharacters'));
+    return localSavedCharacters;
+  }
+
+  function save() {
+    const id = props.match.params.id;
+    const name = getField().charname.textContent;
+    const desc = getField().chardesc.textContent;
+    const character = {
+      id: id,
+      name: name,
+      description: desc,
+    }
+    let editedCharacters = getCharactes() || {};
+    editedCharacters[id] = character;
+    localStorage.setItem('editedCharacters', JSON.stringify(editedCharacters));
+  }
+
+  function getField() {
+    return {
+      charname: document.getElementById('charname'),
+      chardesc: document.getElementById('chardesc'),
+    }
+  }
   return (
     <div id="edit__character" className="details__character-edit">
       <form className="form">
@@ -56,4 +82,4 @@ const CharactersEdit = () => {
   );
 };
 
-export default CharactersEdit;
+export default withRouter(CharactersEdit);
