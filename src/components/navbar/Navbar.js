@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from '../form/search/Search';
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import './Navbar.scss'
 
 const Navbar = (props) => {
@@ -12,7 +12,7 @@ const Navbar = (props) => {
       </Link>
       </div>
       <div className="navbar__search">
-        <Search onSearch={props.onSearch}/>
+      <Route exact path="/" render={() =><Search onSearch={props.onSearch}/> } /> 
       </div>
       <div className="navbar__links"></div>
     </div>

@@ -16,8 +16,8 @@ const CharacterDesc = (props) => {
     character ? 
       <div className='details__info'>
         <div className="details__info-text">
-          <h3 className="details__info-text--title">{character.results[0].name}</h3>
-          <p className="details__info-text--desc">{character.results[0].description}</p>
+          <h3 id='charname'className="details__info-text--title">{character.results[0].name}</h3>
+          <p id="chardesc" className="details__info-text--desc">{character.results[0].description}</p>
         </div>
         <CharacterEdit />
         <div className='details__info-edit-character'>
