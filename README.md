@@ -1,68 +1,63 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 
 
-## Available Scripts
+### Marvel Heroes ###
 
-In the project directory, you can run:
+### Project Intention ###
+* Consume Api and save data on storage
 
-### `npm start`
+### Project Dependencies ###
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ * Npm as package manager. (https://www.npmjs.com/)
+ * React.js as the application library core. (https://reactjs.org/)
+ * Redux as the predictable state container for JavaScript apps. (https://redux.js.org/)
+ * Redux Thunk handle asynchronous calls. (https://github.com/reduxjs/redux-thunk)
+ * Jest as the Javascript test framework. (https://jestjs.io/en/)
+ * Enzyme as the JavaScript Testing utility for React. (https://airbnb.io/enzyme/)
+ * Sass as the preprocessor and extension of CSS. (https://sass-lang.com)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+### Compile and run the client ###
 
-### `npm test`
+Go to the root folder end run the commands.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- npm install (npm i)
 
-### `npm run build`
+- npm run start
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running the tests ###
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- npm run test
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Development Description ###
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+After receiving the challenge, I choose the React library to handle the specifications. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For the client side I use the create-react-app boilerplate to begin the development,and with Npm I add the dependencies and libraries to complete the task.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Application details ###
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Thinking about componentization and organization I follow the components pattern of singularity, each component is independent and have your complete structure in one place. 
 
-## Learn More
+Js, Styles and Test files are inside the specific component folder to become easier to debug, mantain and refactor.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In multidisciplinary teams, I think if someone else is going to work on a specific component if all off functionality are in one place is easy to understand and work on it.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Looking for code organization and reusability of code following the DRY principle, I normally create folders who handle specific things that are reusable. 
 
-### Code Splitting
+Config, helpers, and hocs (higher order components) folders are examples of reusability. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+On Config folder I reserve for files who have configurations and constants that are immutable and reusable in all parts of the system. In this particular case the API links.
 
-### Analyzing the Bundle Size
+The Helper folders I organize js and CSS files that have a specific utilization like label manipulation and CSS variables. were we can reuse on all the system.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Hocs folder as the same, I put all my Higher Order Functions  on the folder because by definition they are reusable.
 
-### Making a Progressive Web App
+The Components folder is where I put the class extended components who will deal as the pages on the system and will handle to get the data necessary for the components who build the page.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+And finally the Redux folder where I organize all the state management structure, the actions creators and reducers.
 
-### Advanced Configuration
+### Test Coverage ###
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+I cover the actions and the reducers, when I test my action I want to verify if my ajax call from my ajaxHelper file are dispatching the right actions. And for my reducers test I want to cover if the states of my application was what I expect.
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Best regards.
