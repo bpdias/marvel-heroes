@@ -1,31 +1,27 @@
 import React from 'react';
-import './Input.scss';
+import './Textarea.scss';
 
-const Input = ({
+const Textarea = ({
   id,
   name,
   placeholder,
-  value,
-  type,
   onChange,
-  disable,
   inputClass,
-  maxlength,
+  isvalid,
   label,
+  rows,
+  columns,
 }) => {
-  
   return (
     <div className="form__group">
-      <input
+      <textarea
         id={id}
-        type={type}
         className={inputClass.join(' ')}
         placeholder={placeholder}
         name={name}
-        value={value}
         onChange={onChange}
-        disabled={disable}
-        maxLength={maxlength}
+        rows={rows}
+        cols={columns}
         />
       <label htmlFor={id} className={`form__label`}>
         {label}
@@ -34,4 +30,4 @@ const Input = ({
   );
 };
 
-export default Input;
+export default Textarea;

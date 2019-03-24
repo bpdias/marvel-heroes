@@ -53,4 +53,8 @@ $color-success: #4F8A10;
     z-index: -1;
     transition: all .4s;
   }
+  
+  &:focus {
+    outline:0;
+  }
 }
