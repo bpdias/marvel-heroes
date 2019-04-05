@@ -1,13 +1,13 @@
-@import '../../helpers/stylesheets/Base';
+@import "../../helpers/stylesheets/Base";
 
-.heroes__card{
-  flex: 0 0 20%; /* explanation below */
+.heroes__card {
+  flex: 0 0 20%;
   margin: 5px;
   height: 100%;
   position: relative;
-  box-shadow: 0 1.5rem 4rem rgba($color-black, .3);  
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.3);
   cursor: pointer;
-  
+
   &-photo {
     border-radius: 3px;
     width: 100%;
@@ -21,15 +21,15 @@
     transform: translate(-50%, -50%);
     text-transform: uppercase;
     font-size: 1.7rem;
-    text-align: center; 
+    text-align: center;
     color: $color-gray-dark;
     opacity: 0;
-    transition: all .5s;
-    
-    &--name{
+    transition: all 0.5s;
+
+    &--name {
       display: block;
     }
-    
+
     &--details {
       font-weight: 400;
       font-size: 1.4rem;
@@ -38,7 +38,7 @@
 
   &:hover {
     animation-name: fadeIn;
-    animation-duration: .5s;
+    animation-duration: 0.5s;
     animation-timing-function: ease-out;
   }
 
@@ -53,15 +53,15 @@
     filter: blur(1.6px) brightness(20%);
   }
 
-  @keyframes fadeIn{
+  @keyframes fadeIn {
     0% {
       opacity: 0;
       transform: translate(0%, 0%);
     }
-  
+
     100% {
       opacity: 1;
       transform: translate(0%, 0%);
-      }
+    }
   }
 }

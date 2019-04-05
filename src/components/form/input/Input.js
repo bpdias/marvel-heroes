@@ -1,5 +1,5 @@
-import React from 'react';
-import './Input.scss';
+import React from "react";
+import "./Input.scss";
 
 const Input = ({
   id,
@@ -11,26 +11,25 @@ const Input = ({
   disable,
   inputClass,
   maxlength,
-  label,
+  label
 }) => {
-  
   return (
     <div className="form__group">
+      <label htmlFor={id} className={`form__label`}>
+        {label}
+      </label>
       <input
         id={id}
         type={type}
-        className={inputClass.join(' ')}
+        className={inputClass.join(" ")}
         placeholder={placeholder}
         name={name}
         value={value}
         onChange={onChange}
         disabled={disable}
         maxLength={maxlength}
-        />
-      <label htmlFor={id} className={`form__label`}>
-        {label}
-      </label>
-    </div>  
+      />
+    </div>
   );
 };
 
